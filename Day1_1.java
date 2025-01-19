@@ -3,7 +3,7 @@
     두 분수를 더한 값을 기약 분수로 나타냈을 때 분자와 분모를 순서대로 담은 배열을 return 하도록 solution 함수를 완성해보세요.
 */
 
-public class Day1 {
+public class Day1_1 {
     public int[] solution(int numer1, int denom1, int numer2, int denom2) {
 
         numer1 = numer1 * denom2;
