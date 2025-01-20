@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="717e80b3-aab3-4859-99d9-b0ccd7c0cec0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Day1_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +54,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -74,7 +78,8 @@
       <workItem from="1737284348118" duration="869000" />
       <workItem from="1737285453370" duration="1209000" />
       <workItem from="1737287412142" duration="6000" />
-      <workItem from="1737288172821" duration="371000" />
+      <workItem from="1737288172821" duration="420000" />
+      <workItem from="1737361072166" duration="4486000" />
     </task>
     <servers />
   </component>
