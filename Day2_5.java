@@ -21,9 +21,11 @@ public class Day2_5 {
             number = 2;
         }
         else if (dot[0] < 0) {
+            // dot[1]은 당연히 0보다 작음
             number = 3;
         }
         else {
+            // 이외의 범위 변수가 없음
             number = 4;
         }
 

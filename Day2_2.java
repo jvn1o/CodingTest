@@ -1,6 +1,6 @@
 /*
     각에서 0도 초과 90도 미만은 예각, 90도는 직각, 90도 초과 180도 미만은 둔각 180도는 평각으로 분류합니다.
-    각 angle이 매개변수로 주어질 때 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 return하도록 solution 함수를 완성해주세요.
+    각 angle 이 매개변수로 주어질 때 예각일 때 1, 직각일 때 2, 둔각일 때 3, 평각일 때 4를 return 하도록 solution 함수를 완성해주세요.
 
     예각 : 0 < angle < 90
     직각 : angle = 90
@@ -13,12 +13,15 @@ public class Day2_2 {
         int answer = 0;
 
         if (angle < 90) {
+            // 당연히 0으로 시작하였으니 0보다 크다는 가정은 없어도 됨
             answer = 1;
         } else if (angle == 90) {
             answer = 2;
         } else if (angle < 180) {
+            // else if 이므로 이전 범위는 생략
             answer = 3;
         } else if (angle == 180) {
+            // else if 이므로 이전 범위는 생략
             answer = 4;
         }
         return answer;
