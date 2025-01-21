@@ -5,10 +5,6 @@
 
 public class Day3_3 {
     public String solution(String my_string) {
-        StringBuilder builder = new StringBuilder();
-        for (int i = my_string.length() - 1; i >= 0; i--) {
-            builder.append(my_string.charAt(i));
-        }
-        return builder.toString();
+        return new StringBuilder(my_string).reverse().toString();
     }
 }
