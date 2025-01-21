@@ -4,7 +4,13 @@
 */
 
 public class Day3_3 {
-    public String solution(String my_string) {
-        return new StringBuilder(my_string).reverse().toString();
+    public int[] solution(String[] strlist) {
+        int[] num = new int[strlist.length];
+
+        for (int i = 0; i < strlist.length; i++) {
+            num[i] = strlist[i].length();
+        }
+
+        return num;
     }
 }
