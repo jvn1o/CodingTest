@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="717e80b3-aab3-4859-99d9-b0ccd7c0cec0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="717e80b3-aab3-4859-99d9-b0ccd7c0cec0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,7 +42,6 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Day4_1.executor": "Run",
-    "Application.Day4_2.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "CodingTest",
     "kotlin-language-version-configured": "true",
@@ -83,7 +80,7 @@
       <workItem from="1737288172821" duration="420000" />
       <workItem from="1737361072166" duration="4901000" />
       <workItem from="1737449037140" duration="7171000" />
-      <workItem from="1737548576298" duration="1862000" />
+      <workItem from="1737548576298" duration="890000" />
     </task>
     <servers />
   </component>
