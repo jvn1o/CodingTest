@@ -41,29 +41,30 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Day4_1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day4_2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day6_1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day6_2.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;CodingTest&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Day4_1.executor": "Run",
+    "Application.Day4_2.executor": "Run",
+    "Application.Day6_1.executor": "Run",
+    "Application.Day6_2.executor": "Run",
+    "Application.Day7_4.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "CodingTest",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day6_2">
+  <component name="RunManager" selected="Application.Day7_4">
     <configuration name="Day6_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day6_1" />
       <module name="Programmers" />
@@ -78,8 +79,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day7_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day7_4" />
+      <module name="Programmers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day7_4" />
         <item itemvalue="Application.Day6_2" />
         <item itemvalue="Application.Day6_1" />
       </list>
@@ -110,7 +119,7 @@
       <workItem from="1737548576298" duration="3601000" />
       <workItem from="1737625645157" duration="9964000" />
       <workItem from="1737692845968" duration="5507000" />
-      <workItem from="1737730511785" duration="1876000" />
+      <workItem from="1737730511785" duration="2179000" />
     </task>
     <servers />
   </component>
