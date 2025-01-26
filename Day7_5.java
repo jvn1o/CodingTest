@@ -19,7 +19,7 @@ public class Day7_5 {
 
     /*
         - 기발했던 풀이법 -
-        
+
         int[] answer = new int[2];
 
         for(int i = 0; i < num_list.length; i++)
