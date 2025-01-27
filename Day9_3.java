@@ -17,7 +17,7 @@ public class Day9_3 {
             char converted = (char) ('a' + (ageStr.charAt(i) - '0'));
             result.append(converted);
         }
-        
+
         return result.toString();
     }
 }
