@@ -54,8 +54,10 @@
     "Application.Day9_2.executor": "Run",
     "Application.Day9_3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "CodingTest",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "<알 수 없음>",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/KJS/Desktop/CodingTest",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -69,7 +71,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day9_3">
+  <component name="RunManager" selected="애플리케이션.Day7_4">
     <configuration name="Day7_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Week1.Day7_4" />
       <module name="Programmers" />
@@ -105,21 +107,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Day9_3" />
-        <item itemvalue="Application.Day9_2" />
-        <item itemvalue="Application.Day9_1" />
-        <item itemvalue="Application.Day8_3" />
-        <item itemvalue="Application.Day7_4" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.24807.4" />
-        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.24807.4" />
+        <option value="bundled-jdk-9823dce3aa75-125ca727e0f0-intellij.indexing.shared.core-IU-243.23654.153" />
+        <option value="bundled-js-predefined-d6986cc7102b-822845ee3bb5-JavaScript-IU-243.23654.153" />
       </set>
     </attachedChunks>
   </component>
@@ -143,6 +136,7 @@
       <workItem from="1737730511785" duration="2602000" />
       <workItem from="1737900312393" duration="3184000" />
       <workItem from="1737975315650" duration="3905000" />
+      <workItem from="1738054039520" duration="555000" />
     </task>
     <servers />
   </component>
