@@ -9,6 +9,7 @@
 
 public class Day11_2 {
     public int solution(int balls, int share) {
+        if (share == 0 || balls == share) return 1;
         long answer = 1;
         for (int i = 0; i < share; i++) {
             answer *= (balls - i);
