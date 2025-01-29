@@ -9,11 +9,12 @@
 
 public class Day11_2 {
     public int solution(int balls, int share) {
-        int result = 1;
+        long answer = 1;
         for (int i = 0; i < share; i++) {
-            result *= (balls - i);
-            result /= (i + 1);
+            answer *= (balls - i);
+            answer /= (i + 1);
         }
-        return result;
+        return (int) answer;
+        // long 타입으로 받아서 int 로 변환하는 이유는, overflow 로 인한 값 손실이 생기는 케이스가 존재하기 때문이다.
     }
 }
