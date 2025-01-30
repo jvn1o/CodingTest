@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="717e80b3-aab3-4859-99d9-b0ccd7c0cec0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day12_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Day12_1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +45,8 @@
   &quot;keyToString&quot;: {
     &quot;Application.Day11_1.executor&quot;: &quot;Run&quot;,
     &quot;Application.Day11_3.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Day12_1.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Day12_3.executor&quot;: &quot;Run&quot;,
     &quot;Application.Day4_1.executor&quot;: &quot;Run&quot;,
     &quot;Application.Day4_2.executor&quot;: &quot;Run&quot;,
     &quot;Application.Day6_1.executor&quot;: &quot;Run&quot;,
@@ -75,14 +76,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day12_1">
-    <configuration name="Day10_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day10_4" />
-      <module name="Programmers" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.Day13_3">
     <configuration name="Day11_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day11_1" />
       <module name="Programmers" />
@@ -104,8 +98,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Day9_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day9_3" />
+    <configuration name="Day12_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day12_3" />
+      <module name="Programmers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Day13_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day13_3" />
       <module name="Programmers" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -113,6 +114,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Day13_3" />
+        <item itemvalue="Application.Day12_3" />
         <item itemvalue="Application.Day12_1" />
         <item itemvalue="Application.Day11_3" />
         <item itemvalue="Application.Day11_1" />
@@ -149,7 +152,8 @@
       <workItem from="1737975315650" duration="3905000" />
       <workItem from="1738054039520" duration="2140000" />
       <workItem from="1738159149820" duration="2817000" />
-      <workItem from="1738220634115" duration="665000" />
+      <workItem from="1738220634115" duration="4665000" />
+      <workItem from="1738277288261" duration="752000" />
     </task>
     <servers />
   </component>
