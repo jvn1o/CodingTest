@@ -60,7 +60,7 @@
     "Application.Day9_3.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "CodingTest",
+    "git-widget-placeholder": "<알 수 없음>",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/KJS/Desktop/CodingTest",
     "node.js.detected.package.eslint": "true",
@@ -70,6 +70,7 @@
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true",
     "애플리케이션.Day10_4.executor": "Run",
+    "애플리케이션.Day14_1.executor": "Run",
     "애플리케이션.Day7_4.executor": "Run"
   }
 }]]></component>
@@ -78,14 +79,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day13_4">
-    <configuration name="Day11_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day11_3" />
-      <module name="Programmers" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="애플리케이션.Day14_1">
     <configuration name="Day12_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day12_1" />
       <module name="Programmers" />
@@ -114,13 +108,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day14_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day14_1" />
+      <module name="Programmers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Day13_4" />
-        <item itemvalue="Application.Day13_3" />
-        <item itemvalue="Application.Day12_3" />
-        <item itemvalue="Application.Day12_1" />
-        <item itemvalue="Application.Day11_3" />
+        <item itemvalue="애플리케이션.Day14_1" />
       </list>
     </recent_temporary>
   </component>
