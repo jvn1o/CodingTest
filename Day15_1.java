@@ -7,5 +7,21 @@
 */
 
 public class Day15_1 {
-    
+    public int solution(String s) {
+        String[] parts = s.split(" ");
+
+        int answer = 0;
+        int lastNumber = 0;
+
+        for (String part : parts) {
+            if (part.equals("Z")) {
+                answer -= lastNumber;
+            } else {
+                lastNumber = Integer.parseInt(part);
+                answer += lastNumber;
+            }
+        }
+
+        return answer;
+    }
 }
