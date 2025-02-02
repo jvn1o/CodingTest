@@ -7,6 +7,22 @@
 
     # 다른 사람의 풀이를 보고 Stack 을 이용해도 좋을 것 같다는 생각을 했다.
       직전에 담았던 내용을 뺄수도 있다는 가정에는 Stack 만한 것이 없기 때문이다.
+      public int solution(String s) {
+        int answer = 0;
+        Stack<Integer> stack = new Stack<>();
+
+        for (String w : s.split(" ")) {
+            if (w.equals("Z")) {
+                stack.pop();
+            } else {
+                stack.push(Integer.parseInt(w));
+            }
+        }
+        for (int i : stack) {
+            answer += i;
+        }
+        return answer;
+     }
 */
 
 public class Day15_1 {
