@@ -41,40 +41,41 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Day11_1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day11_3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day12_1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day12_3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day13_3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day13_4.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day4_1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day4_2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day6_1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day6_2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day7_4.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day8_3.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day9_1.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day9_2.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Day9_3.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;&lt;알 수 없음&gt;&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/KJS/Desktop/CodingTest&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;,
-    &quot;애플리케이션.Day10_4.executor&quot;: &quot;Run&quot;,
-    &quot;애플리케이션.Day14_1.executor&quot;: &quot;Run&quot;,
-    &quot;애플리케이션.Day15_1.executor&quot;: &quot;Run&quot;,
-    &quot;애플리케이션.Day7_4.executor&quot;: &quot;Run&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Day11_1.executor": "Run",
+    "Application.Day11_3.executor": "Run",
+    "Application.Day12_1.executor": "Run",
+    "Application.Day12_3.executor": "Run",
+    "Application.Day13_3.executor": "Run",
+    "Application.Day13_4.executor": "Run",
+    "Application.Day4_1.executor": "Run",
+    "Application.Day4_2.executor": "Run",
+    "Application.Day6_1.executor": "Run",
+    "Application.Day6_2.executor": "Run",
+    "Application.Day7_4.executor": "Run",
+    "Application.Day8_3.executor": "Run",
+    "Application.Day9_1.executor": "Run",
+    "Application.Day9_2.executor": "Run",
+    "Application.Day9_3.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "<알 수 없음>",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/KJS/Desktop/CodingTest",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.Day10_4.executor": "Run",
+    "애플리케이션.Day14_1.executor": "Run",
+    "애플리케이션.Day15_1.executor": "Run",
+    "애플리케이션.Day17_5.executor": "Run",
+    "애플리케이션.Day7_4.executor": "Run"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="" />
@@ -158,6 +159,7 @@
       <workItem from="1738277288261" duration="2417000" />
       <workItem from="1738491938942" duration="3985000" />
       <workItem from="1738643497868" duration="2379000" />
+      <workItem from="1738655911387" duration="260000" />
     </task>
     <servers />
   </component>
