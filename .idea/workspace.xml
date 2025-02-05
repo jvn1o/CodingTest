@@ -73,6 +73,7 @@
     "애플리케이션.Day14_1.executor": "Run",
     "애플리케이션.Day15_1.executor": "Run",
     "애플리케이션.Day17_5.executor": "Run",
+    "애플리케이션.Day18_1.executor": "Run",
     "애플리케이션.Day7_4.executor": "Run"
   }
 }]]></component>
@@ -81,14 +82,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="애플리케이션.Day17_5">
-    <configuration name="Day13_3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Day13_3" />
-      <module name="Programmers" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="애플리케이션.Day18_1">
     <configuration name="Day13_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day13_4" />
       <module name="Programmers" />
@@ -117,8 +111,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Day18_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Day18_1" />
+      <module name="Programmers" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="애플리케이션.Day18_1" />
         <item itemvalue="애플리케이션.Day17_5" />
         <item itemvalue="애플리케이션.Day15_1" />
         <item itemvalue="애플리케이션.Day14_1" />
@@ -159,7 +161,7 @@
       <workItem from="1738277288261" duration="2417000" />
       <workItem from="1738491938942" duration="3985000" />
       <workItem from="1738643497868" duration="2379000" />
-      <workItem from="1738655911387" duration="880000" />
+      <workItem from="1738655911387" duration="1191000" />
     </task>
     <servers />
   </component>
