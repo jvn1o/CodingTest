@@ -8,18 +8,10 @@ import java.util.*;
 
 class Day21_2 {
     public int solution(int a, int b, int c) {
-        Set<Integer> duplicate = new HashSet<>(Arrays.asList(a,b,c));
-        int answer = (a + b + c);
+        Set<Integer> numbers = new HashSet<>(Arrays.asList(a,b,c));
 
-        switch (duplicate.size()) {
-            case 2:
-                answer *=
-                        ((int) Math.pow(a, 2) + (int) Math.pow(b, 2) + (int) Math.pow(c, 2));
-                break;
-            case 1:
-                answer *=
-                        ((int) Math.pow(a, 2) + (int) Math.pow(b, 2) + (int) Math.pow(c, 2)) *
-                                ((int) Math.pow(a, 3) + (int) Math.pow(b, 3) + (int) Math.pow(c, 3));
-                break;
-        }
+        return (a + b + c) *
+                (numbers.size() < 3 ? (a * a + b * b + c * c) : 1) *
+                (numbers.size() < 2 ? (a * a * a + b * b * b + c * c * c) : 1);
+    }
 }
