@@ -1,18 +1,10 @@
 /*
-    1부터 6까지 숫자가 적힌 주사위가 세 개 있습니다.
-    세 주사위를 굴렸을 때 나온 숫자를 각각 a, b, c라고 했을 때 얻는 점수는 다음과 같습니다.
-
-    세 숫자가 모두 다르다면 a + b + c 점을 얻습니다.
-    세 숫자 중 어느 두 숫자는 같고 나머지 다른 숫자는 다르다면
-    (a + b + c) × (a2 + b2 + c2 )점을 얻습니다.
-    세 숫자가 모두 같다면 (a + b + c) × (a2 + b2 + c2 ) × (a3 + b3 + c3 )점을 얻습니다.
-    세 정수 a, b, c가 매개변수로 주어질 때,
-    얻는 점수를 return 하는 solution 함수를 작성해 주세요.
+    두 정수 a, d와 길이가 n인 boolean 배열 included 가 주어집니다.
+    첫째항이 a, 공차가 d인 등차수열에서 included[i]가 i + 1항을 의미할 때,
+    이 등차수열의 1항부터 n 항까지 included 가 true 인 항들만 더한 값을 return 하는
+    solution 함수를 작성해 주세요.
 */
-
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 class Day21_2 {
     public int solution(int a, int b, int c) {
@@ -30,7 +22,4 @@ class Day21_2 {
                                 ((int) Math.pow(a, 3) + (int) Math.pow(b, 3) + (int) Math.pow(c, 3));
                 break;
         }
-
-        return answer;
-    }
 }
