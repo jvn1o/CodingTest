@@ -11,10 +11,10 @@ class Day22_2 {
     public int[] solution(int[] num_list) {
         int last = num_list[num_list.length - 1];
         int prev = num_list[num_list.length - 2];
-        int newElement = (last > prev) ? (last - prev) : (last * 2);
+        int newOne = (last > prev) ? (last - prev) : (last * 2);
 
         int[] answer = Arrays.copyOf(num_list, num_list.length + 1);
-        answer[answer.length - 1] = newElement;
+        answer[answer.length - 1] = newOne;
 
         return answer;
     }
