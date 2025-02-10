@@ -6,9 +6,23 @@
     만약 그러한 정수가 없다면, -1이 담긴 배열을 return 합니다.
 */
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 class Day23_3 {
-    public int[] solution(int l, int r) {
-        int[] answer = {};
-        return answer;
+
+    class Solution {
+        public int[] solution(int l, int r) {
+            ArrayList<Integer> answer = new ArrayList<>();
+
+            for (int i = l; i <= r; i++) {
+                if (i % 5 == 0) {
+                    answer.add(i);
+                }
+            }
+
+            Collections.sort(answer);
+            return answer.size() > 0 ? answer : -1;
+        }
     }
 }
