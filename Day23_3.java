@@ -10,19 +10,34 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 class Day23_3 {
+    public int[] solution(int l, int r) {
+        ArrayList<Integer> answer = new ArrayList<>();
 
-    class Solution {
-        public int[] solution(int l, int r) {
-            ArrayList<Integer> answer = new ArrayList<>();
+        for (int i = l; i <= r; i++) {
+            String str = String.valueOf(i);
+            boolean valid = true;
 
-            for (int i = l; i <= r; i++) {
-                if (i % 5 == 0) {
-                    answer.add(i);
+            for (char c : str.toCharArray()) {
+                if (c != '0' && c != '5') {
+                    valid = false;
+                    break;
                 }
             }
 
-            Collections.sort(answer);
-            return answer.size() > 0 ? answer : -1;
+            if (valid) {
+                answer.add(i);
+            }
         }
+
+        if (answer.isEmpty()) {
+            return new int[]{-1};
+        }
+
+        int[] answerArray = new int[answer.size()];
+        for (int i = 0; i < answer.size(); i++) {
+            answerArray[i] = answer.get(i);
+        }
+
+        return answerArray;
     }
 }
