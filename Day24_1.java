@@ -7,9 +7,8 @@
 */
 
 import java.util.ArrayList;
-import java.util.Collections;
 
-class Day23_3 {
+class Day24_1 {
     public int[] solution(int l, int r) {
         ArrayList<Integer> answer = new ArrayList<>();
 
@@ -33,11 +32,11 @@ class Day23_3 {
             return new int[]{-1};
         }
 
-        int[] answerArray = new int[answer.size()];
+        int[] result = new int[answer.size()];
         for (int i = 0; i < answer.size(); i++) {
-            answerArray[i] = answer.get(i);
+            result[i] = answer.get(i);
         }
 
-        return answerArray;
+        return result;
     }
 }
