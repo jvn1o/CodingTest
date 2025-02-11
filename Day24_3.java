@@ -12,9 +12,24 @@
     초기값이 n인 콜라츠 수열을 return 하는 solution 함수를 완성해 주세요.
 */
 
+import  java.util.*;
+
 class Day24_3 {
     public int[] solution(int n) {
-        int[] answer = {};
-        return answer;
+        ArrayList<Integer> answer = new ArrayList<>();
+
+        while (n != 1) {
+            answer.add(n);
+            if (n % 2 == 0)  {
+                n /= 2;
+            }
+            else {
+                n = (3 * n) + 1;
+            }
+        }
+
+        answer.add(1);
+
+        return answer.stream().mapToInt(i -> i).toArray();
     }
 }
