@@ -32,11 +32,13 @@ class Day25_2 {
             }
         }
 
+
         int[] answer = new int[stk.size()];
         for (int j = 0; j < stk.size(); j++) {
             answer[j] = stk.get(j);
         }
 
+            
         return answer;
     }
 }
