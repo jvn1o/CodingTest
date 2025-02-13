@@ -20,14 +20,45 @@
 
 import java.util.*;
 
-class Day26_2 {
+class Solution {
     public int solution(int a, int b, int c, int d) {
-        int answer = 0;
-        Set<Integer> set = new TreeSet<>();
+        int[] dice = {a, b, c, d};
 
-        if (set.size() == 1) {
-            
+        Map<Integer, Integer> countNum = new HashMap<>();
+
+        for (int num : dice) {
+            countNum.put(num, countNum.getOrDefault(num, 0) + 1);
         }
 
+        List<Integer> keys = new ArrayList<>(countNum.keySet());
+        Collections.sort(keys);
+
+        if (countNum.size() == 1) {
+            return 1111 * keys.get(0);
+        } else if (countNum.size() == 2) {
+            int firstNum = keys.get(0);
+            int secondNum = keys.get(1);
+
+            if (countNum.get(firstNum) == 3) {
+                return (int) Math.pow((10 * firstNum + secondNum), 2);
+            }
+            if (countNum.get(secondNum) == 3) {
+                return (int) Math.pow((10 * secondNum + firstNum), 2);
+            }
+
+            return (firstNum + secondNum) * Math.abs(firstNum - secondNum);
+        } else if (countNum.size() == 3) {
+            int same = 0, diff1 = 0, diff2 = 0;
+
+            for (int key : keys) {
+                if (countNum.get(key) == 2) same = key;
+                else if (diff1 == 0) diff1 = key;
+                else diff2 = key;
+            }
+
+            return diff1 * diff2;
+        } else {
+            return keys.get(0);
+        }
     }
 }
