@@ -5,11 +5,8 @@
 
 class Day27_5 {
     public String solution(String my_string, int n) {
-        StringBuilder str = new StringBuilder(my_string);
-        for (int i = (str.length() - 1); i >= (str.length() - 1 - n); i--) {
-            
-        }
-        String answer = "";
-        return answer;
+        int startIndex = my_string.length() - n;
+
+        return my_string.substring(startIndex);
     }
 }
