@@ -5,7 +5,6 @@
 */
 
 import java.util.ArrayList;
-import java.util.Arrays;
 
 class Day29_6 {
     public int[] solution(int start_num, int end_num) {
