@@ -5,9 +5,17 @@
     solution 함수를 작성해 주세요.
 */
 
-class Day34_3 {
+class Day34_3{
     public String solution(String my_string, String alp) {
-        String answer = "";
-        return answer;
+        StringBuilder answer = new StringBuilder();
+        for (int i = 0; i < my_string.length(); i++) {
+            char ch = my_string.charAt(i);
+
+            if (ch == alp.charAt(0)) {
+                answer.append(Character.toUpperCase(ch));
+            }
+            else answer.append(ch);
+        }
+        return answer.toString();
     }
 }
