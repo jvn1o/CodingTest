@@ -6,21 +6,16 @@
 */
 
 class Day34_2 {
-    public String solution(String myString) {
+    public String solution(String my_string, String alp) {
         StringBuilder answer = new StringBuilder();
+        for (int i = 0; i < my_string.length(); i++) {
+            char ch = my_string.charAt(i);
 
-        for (int i = 0; i < myString.length(); i++) {
-            char ch = myString.charAt(i);
-
-            if (ch == 'a') {
-                answer.append('A');
-            } else if (ch >= 'A' && ch <= 'Z' && ch != 'A') {
-                answer.append(Character.toLowerCase(ch));
-            } else {
-                answer.append(ch);
+            if (ch == alp.charAt(0)) {
+                answer.append(Character.toUpperCase(ch));
             }
+            else answer.append(ch);
         }
-
         return answer.toString();
     }
 }
