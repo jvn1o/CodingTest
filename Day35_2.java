@@ -5,14 +5,14 @@
 
 class Day35_2 {
     public int solution(String myString, String pat) {
-        int count = 0;
-        int index = 0;
+        int cnt = 0;
 
-        while ((index = myString.indexOf(pat, index)) != -1) {
-            count++;
-            index++;
+        for (int i = 0; i < myString.length(); i++) {
+            if (myString.substring(i).startsWith(pat)) {
+                cnt++;
+            }
         }
 
-        return count;
+        return cnt;
     }
 }
