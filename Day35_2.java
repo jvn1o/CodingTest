@@ -1,7 +1,6 @@
 /*
-    문자열 myString 과 pat 가 주어집니다.
-    myString 의 부분 문자열중 pat 로 끝나는 가장 긴 부분 문자열을 찾아서 return 하는
-    solution 함수를 완성해 주세요.
+    문자열 myString 과 pat 이 주어집니다.
+    myString 에서 pat 이 등장하는 횟수를 return 하는 solution 함수를 완성해 주세요.
 */
 
 class Day35_2 {
