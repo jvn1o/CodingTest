@@ -4,7 +4,15 @@
 */
 
 class Day35_2 {
-    public String solution(String myString, String pat) {
-        return myString.substring(0, myString.lastIndexOf(pat) + pat.length());
+    public int solution(String myString, String pat) {
+        int count = 0;
+        int index = 0;
+
+        while ((index = myString.indexOf(pat, index)) != -1) {
+            count++;
+            index++;
+        }
+
+        return count;
     }
 }
