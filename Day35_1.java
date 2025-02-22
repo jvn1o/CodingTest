@@ -6,14 +6,6 @@
 
 class Day35_1 {
     public String solution(String myString, String pat) {
-        StringBuilder answer = new StringBuilder();
-        for (int i = 0; i < myString.length(); i++) {
-            char ch = myString.charAt(i);
-
-            if (ch == pat.charAt(pat.length())) {
-                answer.append(ch);
-            }
-        }
-        return answer.toString();
+        return myString.substring(0, myString.lastIndexOf(pat) + pat.length());
     }
 }
