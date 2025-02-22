@@ -9,7 +9,7 @@ import java.util.Arrays;
 
 class Day36_4 {
     public int[] solution(String myString) {
-        return Arrays.stream(myString.split("x"))
+        return Arrays.stream(myString.split("x", -1))
                 .mapToInt(String::length)
                 .toArray();
     }
