@@ -4,17 +4,8 @@
     solution 함수를 작성해 주세요.
 */
 
-import java.util.ArrayList;
-import java.util.List;
-
 class Day36_2 {
     public String[] solution(String my_string) {
-        List<String> answer = new ArrayList<>();
-
-        for (int i = 0; i < my_string.length(); i++) {
-            if (my_string.startsWith(" ")) answer.add(my_string.substring(1));
-        }
-
-        return answer.toArray(new String[0]);
+        return my_string.split(" ");
     }
 }
