@@ -5,11 +5,9 @@
     주어진 식을 계산한 정수를 return 하는 solution 함수를 작성해 주세요.
 */
 
-import java.util.Arrays;
-
 class Day37_2 {
     public int solution(String binomial) {
-        String[] bio = Arrays.stream(binomial.split(" ")).toArray(String[]::new);
+        String[] bio = binomial.split(" ");
         int a = Integer.parseInt(bio[0]);
         String op = bio[1];
         int b = Integer.parseInt(bio[2]);
