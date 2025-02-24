@@ -1,22 +1,25 @@
 /*
-    문자열 binomial 이 매개변수로 주어집니다.
-    binomial 은 "a op b" 형태의 이항식이고 a와 b는 음이 아닌 정수,
-    op는 '+', '-', '*' 중 하나입니다.
-    주어진 식을 계산한 정수를 return 하는 solution 함수를 작성해 주세요.
+    문자 "A"와 "B"로 이루어진 문자열 myString 과 pat 가 주어집니다.
+    myString 의 "A"를 "B"로,
+    "B"를 "A"로 바꾼 문자열의 연속하는 부분 문자열 중
+    pat 이 있으면 1을 아니면 0을 return 하는
+    solution 함수를 완성하세요.
 */
 
 class Day37_3 {
-    public int solution(String binomial) {
-        String[] bio = binomial.split(" ");
-        int a = Integer.parseInt(bio[0]);
-        String op = bio[1];
-        int b = Integer.parseInt(bio[2]);
+    public int solution(String myString, String pat) {
+        StringBuilder converted = new StringBuilder();
 
-        return switch (op) {
-            case "+" -> a + b;
-            case "-" -> a - b;
-            case "*" -> a * b;
-            default -> 0;
-        };
+        for (char ch : myString.toCharArray()) {
+            if (ch == 'A') {
+                converted.append('B');
+            } else if (ch == 'B') {
+                converted.append('A');
+            } else {
+                converted.append(ch);
+            }
+        }
+
+        return converted.toString().contains(pat) ? 1 : 0;
     }
 }
