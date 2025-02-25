@@ -21,7 +21,7 @@ class Day38_1 {
             }
             else {
                 for (int j = 0; j < arr[i]; j++) {
-                    answer.remove(arr[answer.size() - 1]);
+                    answer.remove(answer.size() - 1);
                 }
             }
         }
