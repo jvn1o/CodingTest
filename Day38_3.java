@@ -13,9 +13,28 @@
     단, 완성될 배열의 길이가 k보다 작으면 나머지 값을 전부 -1로 채워서 return 합니다.
 */
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 class Day38_3 {
     public int[] solution(int[] arr, int k) {
-        int[] answer = {};
+        Set<Integer> set = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
+
+        for (int num : arr) {
+            if (!set.contains(num)) {
+                set.add(num);
+                list.add(num);
+                if (list.size() == k) break;
+            }
+        }
+
+        while (list.size() < k) {
+            list.add(-1);
+        }
+        
         return answer;
     }
 }
