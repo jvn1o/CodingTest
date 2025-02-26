@@ -4,16 +4,17 @@
     가장 개수가 많은 그룹의 크기를 return 하는 solution 함수를 완성해 주세요.
 */
 
-import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 class Day39_3 {
     public int solution(String[] strArr) {
-        int[] lengthCount = new int[31];
+        Map<Integer, Integer> count = new HashMap<>();
 
         for (String str : strArr) {
-            lengthCount[str.length()]++;
+        count.put(str.length(), count.getOrDefault(str.length(), 0) + 1);
         }
-        
-        return Arrays.stream(lengthCount).max().getAsInt();
+
+        return count.values().stream().max(Integer::compare).orElse(0);
     }
 }
