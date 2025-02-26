@@ -7,19 +7,23 @@
     같다면 같습니다.
 
     두 정수 배열 arr1과 arr2가 주어질 때,
-    위에서 정의한 배열의 대소관계에 대하여 arr2가 크다면 -1, arr1이 크다면 1, 두 배열이 같다면 0을 return 하는 solution 함수를 작성해 주세요.
+    위에서 정의한 배열의 대소관계에 대하여 arr2가 크다면 -1, arr1이 크다면 1,
+    두 배열이 같다면 0을 return 하는
+    solution 함수를 작성해 주세요.
 */
 
-import java.util.Arrays;
 
 class Day39_2 {
-    public int[] solution(int[] arr) {
-        int length = 1;
-
-        while (length < arr.length) {
-            length *= 2;
+    public int solution(int[] arr1, int[] arr2) {
+        int sum1 = 0;
+        int sum2 = 0;
+        if (arr1.length != arr2.length) {
+            return arr1.length > arr2.length ? 1 : -1;
         }
 
-        return Arrays.copyOf(arr, length);
+        for (int num : arr1) sum1 += num;
+        for (int num : arr2) sum2 += num;
+
+        return Integer.compare(sum1, sum2);
     }
 }
