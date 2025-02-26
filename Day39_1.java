@@ -6,7 +6,18 @@
 
 class Day39_1 {
     public int[] solution(int[] arr) {
-        int[] answer = {};
+        int length = arr.length;
+
+        int p = Integer.highestOneBit(length);
+        if (p == length) {
+            return arr;
+        }
+
+        int newP = p * 2;
+
+        int[] answer = new int[newP];
+        System.arraycopy(arr, 0, answer, 0, length);
+
         return answer;
     }
 }
