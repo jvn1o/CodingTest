@@ -4,20 +4,16 @@
     arr 에 최소한의 개수로 0을 추가한 배열을 return 하는 solution 함수를 작성해 주세요.
 */
 
+import java.util.Arrays;
+
 class Day39_1 {
     public int[] solution(int[] arr) {
-        int length = arr.length;
+        int length = 1;
 
-        int p = Integer.highestOneBit(length);
-        if (p == length) {
-            return arr;
+        while (length < arr.length) {
+            length *= 2;
         }
 
-        int newP = p * 2;
-
-        int[] answer = new int[newP];
-        System.arraycopy(arr, 0, answer, 0, length);
-
-        return answer;
+        return Arrays.copyOf(arr, length);
     }
 }
