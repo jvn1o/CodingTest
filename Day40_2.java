@@ -4,18 +4,18 @@
     solution 함수를 완성해주세요.
 */
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 class Day40_2 {
-    public int[] solution(int[] arr, int n) {
-        if (arr.length % 2 != 0) {
-            for (int i = 0; i < arr.length; i += 2) {
-                arr[i] += n;
-            }
-        } else {
-            for (int i = 1; i < arr.length; i += 2) {
-                arr[i] += n;
-            }
+    public int[] solution(int[] num_list) {
+        Arrays.sort(num_list);
+        List<Integer> answer = new ArrayList<>();
+        for (int i = 0; i < 5; i++) {
+            answer.add(num_list[i]);
         }
 
-        return arr;
+        return answer.stream().mapToInt(i -> i).toArray();
     }
 }
