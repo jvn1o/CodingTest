@@ -8,6 +8,6 @@ import java.util.Arrays;
 
 class Day40_2 {
     public int[] solution(int[] num_list) {
-        return Arrays.stream(num_list).sorted().toArray();
+        return Arrays.stream(num_list).sorted().limit(5).toArray();
     }
 }
