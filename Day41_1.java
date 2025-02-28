@@ -12,26 +12,17 @@
     10000 × a + 100 × b + c를 return 하는 solution 함수를 작성해 주세요.
 */
 
-import java.util.ArrayList;
 import java.util.Comparator;
-import java.util.List;
+import java.util.stream.IntStream;
 
 class Day41_1 {
     public int solution(int[] rank, boolean[] attendance) {
-        List<int[]> eligibleStudents = new ArrayList<>();
-
-        for (int i = 0; i < rank.length; i++) {
-            if (attendance[i]) {
-                eligibleStudents.add(new int[]{rank[i], i});
-            }
-        }
-
-        eligibleStudents.sort(Comparator.comparingInt(a -> a[0]));
-
-        int a = eligibleStudents.get(0)[1];
-        int b = eligibleStudents.get(1)[1];
-        int c = eligibleStudents.get(2)[1];
-
-        return 10000 * a + 100 * b + c;
+        return IntStream.range(0, rank.length)
+                .filter(i -> attendance[i])
+                .boxed()
+                .sorted(Comparator.comparing(i -> rank[i]))
+                .limit(3L)
+                .reduce((current, next) -> current * 100 + next)
+                .get();
     }
 }
