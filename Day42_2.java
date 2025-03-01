@@ -6,11 +6,6 @@
 
 class Day42_2 {
     public String solution(String n_str) {
-        int index = 0;
-        while (index < n_str.length() && n_str.charAt(index) == '0') {
-            index++;
-        }
-
-        return n_str.substring(index);
+        return ""+Integer.parseInt(n_str);
     }
 }
