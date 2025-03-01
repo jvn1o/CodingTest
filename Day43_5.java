@@ -11,7 +11,7 @@
 
 class Day43_5 {
     public int solution(int a, int b) {
-        if ((a + b) % 2 == 0)  {
+        if (a % 2 != 0 && b % 2 != 0) {
             return a * a + b * b;
         } else if (a % 2 != 0 || b % 2 != 0) {
             return 2 * (a + b);
