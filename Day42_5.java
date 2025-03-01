@@ -5,19 +5,13 @@
     solution 함수를 작성해 주세요.
 */
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.stream.IntStream;
 
 class Day42_5 {
     public int[] solution(int[] arr, int[] delete_list) {
-        Set<Integer> deleteNum = new HashSet<>();
-        for (int num : delete_list) {
-            deleteNum.add(num);
-        }
 
-        return Arrays.stream(arr)
-                .filter(num -> !deleteNum.contains(num))
+        return IntStream.of(arr)
+                .filter(i -> IntStream.of(delete_list).noneMatch(s -> s == i))
                 .toArray();
     }
 }
