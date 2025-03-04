@@ -13,7 +13,16 @@
 
 class Day45_2 {
     public int solution(String[] order) {
-        int answer = 0;
-        return answer;
+        int totalPrice = 0;
+
+        for (String menu : order) {
+            if (menu.contains("latte")) {
+                totalPrice += 5000;
+            } else {
+                totalPrice += 4500;
+            }
+        }
+
+        return totalPrice;
     }
 }
