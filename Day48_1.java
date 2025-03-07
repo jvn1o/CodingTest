@@ -26,7 +26,12 @@
 
 class Day48_1 {
     public int solution(int[][] sizes) {
-        int answer = 0;
-        return answer;
+        int max = 0;
+        for (int i = 0; i < sizes.length; i++) {
+            for (int j = 0; j < sizes.length; j++) {
+                max = Math.max(sizes[0][i], sizes[j][0]);
+            }
+        }
+        return max;
     }
 }
