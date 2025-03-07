@@ -26,12 +26,17 @@
 
 class Day48_1 {
     public int solution(int[][] sizes) {
-        int max = 0;
-        for (int i = 0; i < sizes.length; i++) {
-            for (int j = 0; j < sizes.length; j++) {
-                max = Math.max(sizes[0][i], sizes[j][0]);
-            }
+        int maxW = 0;
+        int maxH = 0;
+
+        for (int[] size : sizes) {
+            int w = Math.max(size[0], size[1]);
+            int h = Math.max(size[0], size[1]);
+
+            maxW = Math.max(maxW, w);
+            maxH = Math.max(maxH, h);
         }
-        return max;
+
+        return maxW * maxH;
     }
 }
