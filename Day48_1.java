@@ -24,19 +24,9 @@
     지갑의 크기를 return 하도록 solution 함수를 완성해주세요.
 */
 
-import java.util.HashSet;
-import java.util.Set;
-
 class Day48_1 {
-    public int solution(int[] nums) {
-        Set<Integer> pokemonList = new HashSet<>();
-
-        for (int num : nums) {
-            pokemonList.add(num);
-        }
-
-        int select = nums.length / 2;
-
-        return Math.min(pokemonList.size(), select);
+    public int solution(int[][] sizes) {
+        int answer = 0;
+        return answer;
     }
 }
