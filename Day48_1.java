@@ -30,8 +30,8 @@ class Day48_1 {
         int maxH = 0;
 
         for (int[] size : sizes) {
-            int w = Math.max(size[0], size[1]);
-            int h = Math.max(size[0], size[1]);
+            int w = Math.max(size[0], size[1]); // 가로는 가장 큰 길이
+            int h = Math.min(size[0], size[1]); // 세로는 눕히면되므로 가장 작은 길이
 
             maxW = Math.max(maxW, w);
             maxH = Math.max(maxH, h);
