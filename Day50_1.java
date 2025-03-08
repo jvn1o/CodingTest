@@ -27,9 +27,8 @@ class Day50_1 {
             students[r]++;
         }
 
-        // 체육복 빌려주기 (앞뒤 학생 확인)
         for (int i = 1; i <= n; i++) {
-            if (students[i] == 0) { // 체육복이 없는 경우
+            if (students[i] == 0) {
                 if (i > 1 && students[i - 1] == 2) { // 앞 학생이 여벌이 있으면 빌리기
                     students[i - 1]--;
                     students[i]++;
@@ -40,7 +39,6 @@ class Day50_1 {
             }
         }
 
-        // 체육복이 1개 이상인 학생 수 계산
         int count = 0;
         for (int i = 1; i <= n; i++) {
             if (students[i] >= 1) {
