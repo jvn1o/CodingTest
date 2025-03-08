@@ -38,5 +38,23 @@ class Day49_1 {
 
         return count;
     }
+
+    private void permute(String numbers, boolean[] visited, StringBuilder sb, Set<Integer> numberSet, int length) {
+        if (sb.length() == length) {
+            numberSet.add(Integer.parseInt(sb.toString())); // 숫자로 변환하여 Set에 추가
+            return;
+        }
+        
+        for (int i = 0; i < numbers.length(); i++) {
+            if (!visited[i]) {
+                visited[i] = true;
+                sb.append(numbers.charAt(i));
+
+                permute(numbers, visited, sb, numberSet, length);
+
+                sb.deleteCharAt(sb.length() - 1);
+                visited[i] = false;
+            }
+        }
     }
 }
