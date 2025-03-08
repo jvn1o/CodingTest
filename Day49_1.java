@@ -45,6 +45,7 @@ class Day49_1 {
             return;
         }
         
+
         for (int i = 0; i < numbers.length(); i++) {
             if (!visited[i]) {
                 visited[i] = true;
