@@ -14,37 +14,26 @@ import java.util.Arrays;
 
 class Day50_1 {
     public int solution(int n, int[] lost, int[] reserve) {
-        int[] students = new int[n + 1];
+        int[] people = new int[n];
+        int answer = n;
 
-        Arrays.fill(students, 1);
+        for (int l : lost)
+            people[l-1]--;
+        for (int r : reserve)
+            people[r-1]++;
 
-        for (int l : lost) {
-            students[l]--;
-        }
-
-        for (int r : reserve) {
-            students[r]++;
-        }
-
-        for (int i = 1; i <= n; i++) {
-            if (students[i] == 0) {
-                if (i > 1 && students[i - 1] == 2) { // 앞 학생이 여벌이 있으면 빌리기
-                    students[i - 1]--;
-                    students[i]++;
-                } else if (i < n && students[i + 1] == 2) { // 뒷 학생이 여벌이 있으면 빌리기
-                    students[i + 1]--;
-                    students[i]++;
-                }
+        for (int i = 0; i < people.length; i++) {
+            if(people[i] == -1) {
+                if(i-1>=0 && people[i-1] == 1) {
+                    people[i]++;
+                    people[i-1]--;
+                }else if(i+1< people.length && people[i+1] == 1) {
+                    people[i]++;
+                    people[i+1]--;
+                }else
+                    answer--;
             }
         }
-
-        int count = 0;
-        for (int i = 1; i <= n; i++) {
-            if (students[i] >= 1) {
-                count++;
-            }
-        }
-
-        return count;
+        return answer;
     }
 }
