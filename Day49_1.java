@@ -44,7 +44,6 @@ class Day49_1 {
             numberSet.add(Integer.parseInt(sb.toString())); // 숫자로 변환하여 Set에 추가
             return;
         }
-        
 
         for (int i = 0; i < numbers.length(); i++) {
             if (!visited[i]) {
