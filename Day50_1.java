@@ -10,7 +10,6 @@
     체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
 */
 
-
 import java.util.Arrays;
 
 class Day50_1 {
