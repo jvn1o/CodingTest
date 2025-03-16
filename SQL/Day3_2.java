@@ -23,7 +23,7 @@
         DR_NAME,
         DR_ID,
         MCDP_CD,
-        HIRE_YMD
+        TO_CHAR(HIRE_YMD, 'YYYY-MM-DD') AS HIRE_YMD
     FROM DOCTOR
     WHERE
         MCDP_CD LIKE 'CS' OR
