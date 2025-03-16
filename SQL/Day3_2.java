@@ -1,42 +1,34 @@
 /*
-    다음은 어느 의류 쇼핑몰의 온라인 상품 판매 정보를 담은 ONLINE_SALE 테이블 입니다.
-    ONLINE_SALE 테이블은 아래와 같은 구조로 되어있으며
-    ONLINE_SALE_ID, USER_ID, PRODUCT_ID, SALES_AMOUNT, SALES_DATE 는
-    각각 온라인 상품 판매 ID, 회원 ID, 상품 ID, 판매량, 판매일을 나타냅니다.
+    다음은 종합병원에 속한 의사 정보를 담은 DOCTOR 테이블입니다.
+    DOCTOR 테이블은 다음과 같으며
+    DR_NAME, DR_ID, LCNS_NO, HIRE_YMD, MCDP_CD, TLNO는
+    각각
+    의사이름, 의사ID, 면허번호, 고용일자, 진료과코드, 전화번호를 나타냅니다.
 
     Column name	Type	Nullable
-    ONLINE_SALE_ID	INTEGER	FALSE
-    USER_ID	INTEGER	FALSE
-    PRODUCT_ID	INTEGER	FALSE
-    SALES_AMOUNT	INTEGER	FALSE
-    SALES_DATE	DATE	FALSE
+    DR_NAME	VARCHAR(20)	FALSE
+    DR_ID	VARCHAR(10)	FALSE
+    LCNS_NO	VARCHAR(30)	FALSE
+    HIRE_YMD	DATE	FALSE
+    MCDP_CD	VARCHAR(6)	TRUE
+    TLNO	VARCHAR(50)	TRUE
 
-    동일한 날짜, 회원 ID, 상품 ID 조합에 대해서는 하나의 판매 데이터만 존재합니다.
-
-    ONLINE_SALE 테이블에서 동일한 회원이 동일한 상품을 재구매한 데이터를 구하여,
-    재구매한 회원 ID와 재구매한 상품 ID를 출력하는 SQL 문을 작성해주세요.
-    결과는 회원 ID를 기준으로 오름차순 정렬해주시고 회원 ID가 같다면 상품 ID를 기준으로 내림차순 정렬해주세요.
+    DOCTOR 테이블에서 진료과가 흉부외과(CS)이거나 일반외과(GS)인
+    의사의 이름, 의사ID, 진료과, 고용일자를 조회하는 SQL 문을 작성해주세요.
+    이때 결과는 고용일자를 기준으로 내림차순 정렬하고, 고용일자가 같다면 이름을 기준으로 오름차순 정렬해주세요.
 */
 
 /*
     SELECT
-        I.REST_ID,
-        I.REST_NAME,
-        I.FOOD_TYPE,
-        NVL(I.FAVORITES, 0) AS FAVORITES,
-        I.ADDRESS,
-        ROUND(AVG(R.REVIEW_SCORE), 2) AS SCORE
-    FROM REST_INFO I
-    INNER JOIN REST_REVIEW R ON I.REST_ID = R.REST_ID
-    WHERE I.ADDRESS LIKE '서울%'
-    AND R.REVIEW_SCORE IS NOT NULL
-    GROUP BY
-        I.REST_ID,
-        I.REST_NAME,
-        I.FOOD_TYPE,
-        I.FAVORITES,
-        I.ADDRESS
+        DR_NAME,
+        DR_ID,
+        MCDP_CD,
+        HIRE_YMD
+    FROM DOCTOR
+    WHERE
+        MCDP_CD LIKE 'CS' OR
+        MCDP_CD LIKE 'GS'
     ORDER BY
-        SCORE DESC,
-        NVL(I.FAVORITES, 0) DESC;
+        HIRE_YMD DESC,
+        DR_NAME ASC;
 */
