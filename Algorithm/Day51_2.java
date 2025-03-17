@@ -8,8 +8,7 @@ class Day51_2 {
     public int solution(int[] numbers) {
         int max1 = Integer.MIN_VALUE, max2 = Integer.MIN_VALUE;
 
-        int min1 = Integer.MAX_VALUE;
-        int min2 = Integer.MAX_VALUE;
+        int min1 = Integer.MAX_VALUE, min2 = Integer.MAX_VALUE;
 
         for (int num : numbers) {
             if (num > max1) {
