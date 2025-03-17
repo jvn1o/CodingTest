@@ -9,7 +9,12 @@
 
 class Day51_1 {
     public String solution(String cipher, int code) {
-        String answer = "";
-        return answer;
+        StringBuilder answer = new StringBuilder();
+
+        for (int i = code - 1; i < cipher.length(); i += code) {
+            answer.append(cipher.charAt(i));
+        }
+
+        return answer.toString();
     }
 }
