@@ -21,7 +21,7 @@
 */
 
 /*
-    SELECT 
+    SELECT
         B.BOOK_ID,
         A.AUTHOR_NAME,
         TO_CHAR(B.PUBLISHED_DATE, 'YYYY-MM-DD') AS PUBLISHED_DATE
