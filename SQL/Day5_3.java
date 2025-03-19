@@ -21,5 +21,5 @@
     FROM
         FOOD_PRODUCT
     WHERE
-        MAX(PRICE);
+        PRICE = (SELECT MAX(PRICE) FROM FOOD_PRODUCT);
 */
