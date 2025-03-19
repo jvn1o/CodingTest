@@ -16,5 +16,10 @@
 */
 
 /*
-
+    SELECT
+        *
+    FROM
+        FOOD_PRODUCT
+    WHERE
+        MAX(PRICE);
 */
