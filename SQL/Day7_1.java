@@ -14,19 +14,18 @@
     FOOD_WAREHOUSE 테이블에서 경기도에 위치한
     창고의 ID, 이름, 주소, 냉동시설 여부를 조회하는 SQL 문을 작성해주세요.
 
-    이때 냉동시설 여부가 NULL 인 경우, 
+    이때 냉동시설 여부가 NULL 인 경우,
     'N' 으로 출력시켜 주시고 결과는 창고 ID를 기준으로 오름차순 정렬해주세요.
 */
 
 /*
     SELECT
-        CAR_TYPE,
-        COUNT(*) AS CARS
-    FROM CAR_RENTAL_COMPANY_CAR
+        WAREHOUSE_ID,
+        WAREHOUSE_NAME,
+        ADDRESS,
+        FREEZER_YN
+    FROM FOOD_WAREHOUSE
     WHERE
-        OPTIONS LIKE '%통풍시트%'
-        OR OPTIONS LIKE '%열선시트%'
-        OR OPTIONS LIKE '%가죽시트%'
-    GROUP BY CAR_TYPE
+        ADDRESS IN '경기도'
     ORDER BY CAR_TYPE;
 */
