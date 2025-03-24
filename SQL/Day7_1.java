@@ -25,7 +25,6 @@
         ADDRESS,
         FREEZER_YN
     FROM FOOD_WAREHOUSE
-    WHERE
-        ADDRESS IN '경기도'
-    ORDER BY CAR_TYPE;
+    WHERE ADDRESS LIKE '경기도%'
+    ORDER BY WAREHOUSE_ID;
 */
