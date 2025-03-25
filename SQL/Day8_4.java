@@ -24,7 +24,9 @@
         AGE,
         COALESCE(TLNO, 'NONE') AS TLNO
     FROM PATIENT
-    WHERE AGE <= 12
+    WHERE
+        AGE <= 12 AND
+        GEND_CD = 'W'
     ORDER BY
         AGE DESC,
         PT_NAME;
