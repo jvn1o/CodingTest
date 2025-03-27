@@ -42,7 +42,7 @@
         SALES_AMOUNT
     FROM (
         SELECT
-            SALES_DATE,
+            TO_CHAR(SALES_DATE, 'YYYY-MM-DD') SALES_DATE,
             PRODUCT_ID,
             USER_ID,
             SALES_AMOUNT
@@ -52,7 +52,7 @@
         UNION ALL
 
         SELECT
-            SALES_DATE,
+            TO_CHAR(SALES_DATE, 'YYYY-MM-DD') SALES_DATE,
             PRODUCT_ID,
             NULL AS USER_ID,
             SALES_AMOUNT
