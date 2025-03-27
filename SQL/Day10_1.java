@@ -36,10 +36,28 @@
 
 /*
     SELECT
-        BOOK_ID,
-        TO_CHAR(PUBLISHED_DATE, 'YYYY-MM-DD') AS PUBLISHED_DATE
-    FROM BOOK
-    WHERE EXTRACT(YEAR FROM PUBLISHED_DATE) = 2021
-    AND CATEGORY = '인문'
-    ORDER BY PUBLISHED_DATE;
+        SALES_DATE,
+        PRODUCT_ID,
+        USER_ID,
+        SALES_AMOUNT
+    FROM (
+        SELECT
+            SALES_DATE,
+            PRODUCT_ID,
+            USER_ID,
+            SALES_AMOUNT
+        FROM ONLINE_SALE
+        WHERE TO_CHAR(SALES_DATE, 'YYYY-MM') = '2022-03'
+
+        UNION ALL
+
+        SELECT
+            SALES_DATE,
+            PRODUCT_ID,
+            NULL AS USER_ID,
+            SALES_AMOUNT
+        FROM OFFLINE_SALE
+        WHERE TO_CHAR(SALES_DATE, 'YYYY-MM') = '2022-03'
+    ) SALES
+    ORDER BY SALES_DATE, PRODUCT_ID, USER_ID;
 */
