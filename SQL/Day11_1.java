@@ -1,63 +1,49 @@
 /*
-    다음은 어느 의류 쇼핑몰의 온라인 상품 판매 정보를 담은 ONLINE_SALE 테이블과
-    오프라인 상품 판매 정보를 담은 OFFLINE_SALE 테이블 입니다.
-    ONLINE_SALE 테이블은 아래와 같은 구조로 되어있으며
-    ONLINE_SALE_ID, USER_ID, PRODUCT_ID, SALES_AMOUNT, SALES_DATE 는 각각
-    온라인 상품 판매 ID, 회원 ID, 상품 ID, 판매량, 판매일을 나타냅니다.
+    다음은 어느 자동차 대여 회사의 자동차 대여 기록 정보를 담은
+    CAR_RENTAL_COMPANY_RENTAL_HISTORY 테이블입니다.
+    CAR_RENTAL_COMPANY_RENTAL_HISTORY 테이블은 아래와 같은 구조로 되어있으며,
+    HISTORY_ID, CAR_ID, START_DATE, END_DATE 는 각각
+    자동차 대여 기록 ID, 자동차 ID, 대여 시작일, 대여 종료일을 나타냅니다.
 
     Column name	Type	Nullable
-    ONLINE_SALE_ID	INTEGER	FALSE
-    USER_ID	INTEGER	FALSE
-    PRODUCT_ID	INTEGER	FALSE
-    SALES_AMOUNT	INTEGER	FALSE
-    SALES_DATE	DATE	FALSE
+    HISTORY_ID	INTEGER	FALSE
+    CAR_ID	INTEGER	FALSE
+    START_DATE	DATE	FALSE
+    END_DATE	DATE	FALSE
 
-    동일한 날짜, 회원 ID, 상품 ID 조합에 대해서는 하나의 판매 데이터만 존재합니다.
-
-    OFFLINE_SALE 테이블은 아래와 같은 구조로 되어있으며
-    OFFLINE_SALE_ID, PRODUCT_ID, SALES_AMOUNT, SALES_DATE 는 각각
-    오프라인 상품 판매 ID, 상품 ID, 판매량, 판매일을 나타냅니다.
-
-    Column name	Type	Nullable
-    OFFLINE_SALE_ID	INTEGER	FALSE
-    PRODUCT_ID	INTEGER	FALSE
-    SALES_AMOUNT	INTEGER	FALSE
-    SALES_DATE	DATE	FALSE
-    동일한 날짜, 상품 ID 조합에 대해서는 하나의 판매 데이터만 존재합니다.
-
-    ONLINE_SALE 테이블과 OFFLINE_SALE 테이블에서
-    2022년 3월의 오프라인/온라인 상품 판매 데이터의
-    판매 날짜, 상품 ID, 유저 ID, 판매량을 출력하는 SQL 문을 작성해주세요.
-
-    OFFLINE_SALE 테이블의 판매 데이터의 USER_ID 값은 NULL 로 표시해주세요.
-    결과는 판매일을 기준으로 오름차순 정렬해주시고 판매일이 같다면 상품 ID를 기준으로 오름차순,
-    상품 ID 까지 같다면 유저 ID를 기준으로 오름차순 정렬해주세요.
+    CAR_RENTAL_COMPANY_RENTAL_HISTORY 테이블에서 대여 시작일을 기준으로
+    2022년 8월부터 2022년 10월까지 총 대여 횟수가 5회 이상인 자동차들에 대해서 해당 기간 동안의
+    월별 자동차 ID 별 총 대여 횟수(컬럼명: RECORDS) 리스트를 출력하는 SQL 문을 작성해주세요.
+    결과는 월을 기준으로 오름차순 정렬하고, 월이 같다면 자동차 ID를 기준으로 내림차순 정렬해주세요.
+    특정 월의 총 대여 횟수가 0인 경우에는 결과에서 제외해주세요.
 */
 
 /*
+    WITH RentalCounts AS (
+        -- 2022년 8월~10월 사이 대여 기록이 5회 이상인 자동차 조회
+        SELECT CAR_ID
+        FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+        WHERE START_DATE BETWEEN TO_DATE('2022-08-01', 'YYYY-MM-DD')
+                            AND TO_DATE('2022-10-31', 'YYYY-MM-DD')
+        GROUP BY CAR_ID
+        HAVING COUNT(*) >= 5
+    ),
+    MonthlyRecords AS (
+        -- 5회 이상 대여된 자동차들의 월별 대여 횟수 계산
+        SELECT
+            TO_CHAR(START_DATE, 'MM') AS MONTH, -- MM 형식의 월 추출
+            CAR_ID,
+            COUNT(*) AS RECORDS
+        FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
+        WHERE START_DATE BETWEEN TO_DATE('2022-08-01', 'YYYY-MM-DD')
+                            AND TO_DATE('2022-10-31', 'YYYY-MM-DD')
+          AND CAR_ID IN (SELECT CAR_ID FROM RentalCounts) -- 5회 이상 대여된 자동차만 선택
+        GROUP BY TO_CHAR(START_DATE, 'MM'), CAR_ID
+    )
     SELECT
-        SALES_DATE,
-        PRODUCT_ID,
-        USER_ID,
-        SALES_AMOUNT
-    FROM (
-        SELECT
-            TO_CHAR(SALES_DATE, 'YYYY-MM-DD') SALES_DATE,
-            PRODUCT_ID,
-            USER_ID,
-            SALES_AMOUNT
-        FROM ONLINE_SALE
-        WHERE TO_CHAR(SALES_DATE, 'YYYY-MM') = '2022-03'
-
-        UNION ALL
-
-        SELECT
-            TO_CHAR(SALES_DATE, 'YYYY-MM-DD') SALES_DATE,
-            PRODUCT_ID,
-            NULL AS USER_ID,
-            SALES_AMOUNT
-        FROM OFFLINE_SALE
-        WHERE TO_CHAR(SALES_DATE, 'YYYY-MM') = '2022-03'
-    ) SALES
-    ORDER BY SALES_DATE, PRODUCT_ID, USER_ID;
+        MONTH,
+        CAR_ID,
+        RECORDS
+    FROM MonthlyRecords
+    ORDER BY MONTH ASC, CAR_ID DESC;
 */
