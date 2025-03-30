@@ -19,31 +19,24 @@
 */
 
 /*
-    WITH RentalCounts AS (
-        -- 2022년 8월~10월 사이 대여 기록이 5회 이상인 자동차 조회
-        SELECT CAR_ID
-        FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
-        WHERE START_DATE BETWEEN TO_DATE('2022-08-01', 'YYYY-MM-DD')
-                            AND TO_DATE('2022-10-31', 'YYYY-MM-DD')
-        GROUP BY CAR_ID
-        HAVING COUNT(*) >= 5
-    ),
-    MonthlyRecords AS (
-        -- 5회 이상 대여된 자동차들의 월별 대여 횟수 계산
-        SELECT
-            TO_CHAR(START_DATE, 'MM') AS MONTH, -- MM 형식의 월 추출
-            CAR_ID,
-            COUNT(*) AS RECORDS
-        FROM CAR_RENTAL_COMPANY_RENTAL_HISTORY
-        WHERE START_DATE BETWEEN TO_DATE('2022-08-01', 'YYYY-MM-DD')
-                            AND TO_DATE('2022-10-31', 'YYYY-MM-DD')
-          AND CAR_ID IN (SELECT CAR_ID FROM RentalCounts) -- 5회 이상 대여된 자동차만 선택
-        GROUP BY TO_CHAR(START_DATE, 'MM'), CAR_ID
-    )
     SELECT
-        MONTH,
-        CAR_ID,
-        RECORDS
-    FROM MonthlyRecords
-    ORDER BY MONTH ASC, CAR_ID DESC;
+        EXTRACT(MONTH FROM A.START_DATE) AS MONTH,
+        A.CAR_ID,
+        COUNT(A.CAR_ID) AS RECORDS
+      FROM
+        CAR_RENTAL_COMPANY_RENTAL_HISTORY A,
+        (SELECT
+            CAR_ID
+         FROM
+            CAR_RENTAL_COMPANY_RENTAL_HISTORY C
+         WHERE
+            START_DATE >= TO_DATE('2022-08-01', 'YYYY-MM-DD')
+            AND START_DATE <= LAST_DAY(TO_DATE('2022-10-01','YYYY-MM-DD'))
+         GROUP BY
+            CAR_ID HAVING COUNT(CAR_ID) > 4) B
+     WHERE A.CAR_ID = B.CAR_ID
+       AND A.START_DATE >= TO_DATE('2022-08-01', 'YYYY-MM-DD')
+       AND A.START_DATE <= LAST_DAY(TO_DATE('2022-10-01','YYYY-MM-DD'))
+     GROUP BY EXTRACT(MONTH FROM A.START_DATE), A.CAR_ID
+     ORDER BY MONTH, CAR_ID DESC
 */
