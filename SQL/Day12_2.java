@@ -19,5 +19,6 @@
 
 /*
     SELECT
-        
+        FLOOR(PRICE / 10000) * 10000 AS PRICE_GROUP
+        COUNT
 */
