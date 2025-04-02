@@ -1,19 +1,21 @@
 /*
-    ANIMAL_OUTS 테이블은 동물 보호소에서 입양 보낸 동물의 정보를 담은 테이블입니다.
-    ANIMAL_OUTS 테이블 구조는 다음과 같으며,
-    ANIMAL_ID, ANIMAL_TYPE, DATETIME, NAME, SEX_UPON_OUTCOME 는 각각
-    동물의 아이디, 생물 종, 입양일, 이름, 성별 및 중성화 여부를 나타냅니다.
+    다음은 식당의 정보를 담은 REST_INFO 테이블입니다. REST_INFO 테이블은 다음과 같으며
+    REST_ID, REST_NAME, FOOD_TYPE, VIEWS, FAVORITES, PARKING_LOT, ADDRESS, TEL 은
+    식당 ID, 식당 이름, 음식 종류, 조회수, 즐겨찾기수, 주차장 유무, 주소, 전화번호를 의미합니다.
 
-    NAME	TYPE	NULLABLE
-    ANIMAL_ID	VARCHAR(N)	FALSE
-    ANIMAL_TYPE	VARCHAR(N)	FALSE
-    DATETIME	DATETIME	FALSE
-    NAME	VARCHAR(N)	TRUE
-    SEX_UPON_OUTCOME	VARCHAR(N)	FALSE
+    Column name	Type	Nullable
+    REST_ID	VARCHAR(5)	FALSE
+    REST_NAME	VARCHAR(50)	FALSE
+    FOOD_TYPE	VARCHAR(20)	TRUE
+    VIEWS	NUMBER	TRUE
+    FAVORITES	NUMBER	TRUE
+    PARKING_LOT	VARCHAR(1)	TRUE
+    ADDRESS	VARCHAR(100)	TRUE
+    TEL	VARCHAR(100)	TRUE
 
-    보호소에서는 몇 시에 입양이 가장 활발하게 일어나는지 알아보려 합니다.
-    09:00부터 19:59까지, 각 시간대별로 입양이 몇 건이나 발생했는지 조회하는 SQL 문을 작성해주세요.
-    이때 결과는 시간대 순으로 정렬해야 합니다.
+    REST_INFO 테이블에서 음식종류별로 즐겨찾기수가 가장 많은 식당의
+    음식 종류, ID, 식당 이름, 즐겨찾기수를 조회하는 SQL 문을 작성해주세요.
+    이때 결과는 음식 종류를 기준으로 내림차순 정렬해주세요.
 */
 
 /*
