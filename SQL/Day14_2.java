@@ -24,20 +24,17 @@
 
 /*
     SELECT
-        CATEGORY,
-        SUM(SALES) AS TOTAL_SALES
+        B.CATEGORY,
+        SUM(S.SALES) AS TOTAL_SALES
     FROM
         BOOK B
     JOIN
         BOOK_SALES S
-        ON U.USER_ID = B.WRITER_ID
+        ON B.BOOK_ID = S.BOOK_ID
     WHERE
-        B.STATUS = 'DONE'
+        TO_CHAR(S.SALES_DATE, 'YYYY-MM') = '2022-01'
     GROUP BY
-        U.USER_ID,
-        U.NICKNAME
-    HAVING
-        SUM(B.PRICE) >= 700000
+        B.CATEGORY
     ORDER BY
-        TOTAL_SALES ASC;
+        B.CATEGORY;
 */
