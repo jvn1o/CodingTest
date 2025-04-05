@@ -18,11 +18,9 @@
 
 /*
     SELECT
-        ANIMAL_TYPE,
-        NVL(NAME, 'No name') AS NAME,
-        SEX_UPON_INTAKE
+        COUNT(*) AS USERS
     FROM
-        ANIMAL_INS
-    ORDER BY
-        ANIMAL_ID;
+        USER_INFO
+    WHERE
+        AGE IS NULL;
 */
