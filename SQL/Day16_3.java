@@ -26,7 +26,7 @@
     FROM
         CAR_RENTAL_COMPANY_CAR
     WHERE
-        OPTIONS = '네비게이션'
+        OPTIONS LIKE '%네비게이션%'
     ORDER BY
         CAR_ID DESC;
 */
