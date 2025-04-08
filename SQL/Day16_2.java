@@ -36,6 +36,7 @@
     FROM
         USED_GOODS_BOARD
     WHERE
-        
-
+        CREATED_DATE = TO_DATE('2022-10-05', 'YYYY-MM-DD')
+    ORDER BY
+        BOARD_ID DESC;
 */
