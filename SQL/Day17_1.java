@@ -40,9 +40,12 @@
     FROM USED_GOODS_FILE f
     JOIN (
         SELECT BOARD_ID
-        FROM USED_GOODS_BOARD
+        FROM (
+            SELECT BOARD_ID
+            FROM USED_GOODS_BOARD
+            ORDER BY VIEWS DESC
+        )
         WHERE ROWNUM = 1
-        ORDER BY VIEWS DESC
     ) b ON f.BOARD_ID = b.BOARD_ID
     ORDER BY f.FILE_ID DESC;
 */
