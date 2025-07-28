@@ -14,6 +14,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -80,7 +81,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Day13_4">
+  <component name="RunManager" selected="애플리케이션.Day13_4">
     <configuration name="Day13_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Day13_4" />
       <module name="Programmers" />
@@ -116,11 +117,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Day13_4" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -180,6 +176,7 @@
       <workItem from="1741439356823" duration="11615000" />
       <workItem from="1741594219286" duration="1000" />
       <workItem from="1742214692019" duration="567000" />
+      <workItem from="1753691869674" duration="4469000" />
     </task>
     <servers />
   </component>
